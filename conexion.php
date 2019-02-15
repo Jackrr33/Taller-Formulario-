@@ -25,6 +25,7 @@ $Country = $_POST['Country'];
 $Phone = $_POST['Phone'];
 /*Agregar a tabla*/
 $sql = "INSERT INTO formulario(FirstName,LastName,Email,Card,CardHolder,CardNumber,CVV2,Exp,Street,City,State,ZIP,Country,Phone)
+mysql_query("SELECT * FROM Formulario");
 VALUES ('$FirstName','$LastName','$Email','$Card','$CardHolder','$CardNumber','$CVV2','$Exp','$Street','$City','$State','$ZIP','$Country','$Phone')";
 $result = mysqli_query($mysqli,$sql);
  if (! $result){
@@ -33,5 +34,13 @@ $result = mysqli_query($mysqli,$sql);
                  }else{
                    echo "Registrado exitosamente";
                  }
+
+
+                 for ($i=0;$i<count(formulario);$i++)
+       {
+       echo "<br> formulario " . $i . ": " . formulario[$i];
+       }
+
+  }
 $mysqli->close();
 ?>
