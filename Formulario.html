@@ -12,23 +12,208 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 
-<h4 class="text-center">Please complete the form below</h4>
+  <h4 class="text-center">Please complete the form below</h4>
 
-<h5> Personal Information:</h5>
-  <form>
-    <div class="form-group">
-      <label for="formGroupExampleInput">First Name: </label>
-      <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Example input">
+  <h5> Personal Information:</h5>
+  <form method="post" action="conexion.php" align="center" class="needs-validation" novalidate>
+    <div class="form-group row">
+      <label for="formGroupExampleInput" class="col-sm-2 col-form-label" for="FirstName"> First Name: </label>
+      <div class="col-sm-10">
+        <input type="text" class="form-control" name="FirstName" placeholder="" required>
+      </div>
+    </div>
+    <div class="form-group row">
+      <label for="formGroupExampleInput" class="col-sm-2 col-form-label" for="LastName"> Last Name: </label>
+      <div class="col-sm-10">
+        <input type="text" class="form-control" name="LastName" placeholder="" required>
+      </div>
+    </div>
+    <div class="form-group row">
+      <label for="staticEmail" class="col-sm-2 col-form-label">Email:</label>
+      <div class="col-sm-10">
+        <input type="email" class="form-control" name="Email" aria-describedby="emailHelp" placeholder="" required>
+        <div class="invalid-feedback">
+          Please enter a valid email
+        </div>
+      </div>
+    </div>
+    <h5 align="left">Credit card information: </h5>
+    <div class="form-group row">
+      <label class="col-sm-2 col-form-label" for="inlineFormCustomSelectPref">Credit card type:</label>
+      <div class="col-sm-2">
+        <select class="custom-select my-1 mr-sm-2" name="Card" required>
+          <option value="">Select</option>
+          <option value="VISA">Visa</option>
+          <option value="MASTER CARD">Master Card</option>
+          <option value="AMERICAN EXPRESS">American Express</option>
+        </select>
+        <div class="invalid-feedback">Invalid option, select a valid one.</div>
+      </div>
+    </div>
+    <div class="form-group row">
+      <label for="formGroupExampleInput" class="col-sm-2 col-form-label" for="LastName"> Card Holder: </label>
+      <div class="col-sm-10">
+        <input type="text" class="form-control" name="CardHolder" placeholder="" required>
+      </div>
+    </div>
+    <div class="form-group row">
+      <label for="formGroupExampleInput" class="col-sm-2 col-form-label" for="CardNumer"> Card Number: </label>
+      <div class="col-sm-10">
+        <input type="text" class="form-control" name="CardNumber" placeholder="" required>
+      </div>
+    </div>
+    <div class="form-group row">
+      <label for="formGroupExampleInput" class="col-sm-2 col-form-label" for="CVV2"> CVV2: </label>
+      <div class="col-sm-10">
+        <input type="text" class="form-control" name="CVV2" placeholder="" required>
+      </div>
+    </div>
+    <div class="form-group row">
+      <label class="col-sm-2 col-form-label" for="inlineFormCustomSelectPref">Exp. date:</label>
+      <div class="col-sm-1">
+        <select class="custom-select my-1 mr-sm-2" name="Exp" required>
+          <option value="">Select</option>
+          <option value="01">01</option>
+          <option value="02">02</option>
+          <option value="03">03</option>
+          <option value="01">04</option>
+          <option value="02">05</option>
+          <option value="03">07</option>
+          <option value="01">08</option>
+          <option value="02">09</option>
+          <option value="03">10</option>
+          <option value="01">11</option>
+          <option value="02">12</option>
+          <option value="03">13</option>
+          <option value="03">14</option>
+          <option value="01">15</option>
+          <option value="02">16</option>
+          <option value="03">17</option>
+          <option value="02">18</option>
+          <option value="03">19</option>
+          <option value="02">20</option>
+          <option value="03">21</option>
+          <option value="02">22</option>
+          <option value="03">23</option>
+          <option value="02">24</option>
+          <option value="03">25</option>
+          <option value="02">26</option>
+          <option value="03">27</option>
+          <option value="02">28</option>
+          <option value="03">29</option>
+          <option value="02">30</option>
+          <option value="03">31</option>
+        </select>
+      </div>
+        <div class="col-sm-1,5">
+        <div class="invalid-feedback">Invalid option, select a valid one.</div>
+        <select class="custom-select my-1 mr-sm-2" name="Exp" required>
+          <option value="">Select</option>
+          <option value="2008">1998</option>
+          <option value="2008">1999</option>
+          <option value="2008">2000</option>
+          <option value="2009">2001</option>
+          <option value="2008">2002</option>
+          <option value="2009">2003</option>
+          <option value="2008">2004</option>
+          <option value="2009">2005</option>
+          <option value="2008">2006</option>
+          <option value="2009">2007</option>
+          <option value="2008">2008</option>
+          <option value="2009">2009</option>
+          <option value="2010">2010</option>
+          <option value="2008">2011</option>
+          <option value="2009">2012</option>
+          <option value="2010">2013</option>
+          <option value="2010">2014</option>
+          <option value="2008">2015</option>
+          <option value="2009">2016</option>
+          <option value="2010">2017</option>
+          <option value="2009">2018</option>
+          <option value="2010">2019</option>
+        </select>
+        <div class="invalid-feedback">Invalid option, select a valid one.</div>
+      </div>
+    </div>
+    <div class="form-group row">
+      <label for="formGroupExampleInput" class="col-sm-2 col-form-label" for="Street"> Street address: </label>
+      <div class="col-sm-10">
+        <input type="text" class="form-control" name="Street" placeholder="" required>
+      </div>
+    </div>
+    <div class="form-group row">
+      <label for="formGroupExampleInput" class="col-sm-2 col-form-label" for="City"> City: </label>
+      <div class="col-sm-10">
+        <input type="text" class="form-control" name="City" placeholder="" required>
+      </div>
+    </div>
+    <div class="form-group row">
+      <label for="formGroupExampleInput" class="col-sm-2 col-form-label" for="State"> State: </label>
+      <div class="col-sm-10">
+        <input type="text" class="form-control" name="State" placeholder="" required>
+      </div>
+    </div>
+    <div class="form-group row">
+      <label for="formGroupExampleInput" class="col-sm-2 col-form-label" for="ZIP"> ZIP: </label>
+      <div class="col-sm-10">
+        <input type="text" class="form-control" name="ZIP" placeholder="" required>
+      </div>
+    </div>
+    <div class="form-group row">
+      <label class="col-sm-2 col-form-label" for="inlineFormCustomSelectPref">Country:</label>
+      <div class="col-sm-2">
+        <select class="custom-select my-1 mr-sm-2" name="Country" required>
+          <option value="">Select</option>
+          <option value="United States">United States</option>
+          <option value="Colombia">Canada</option>
+          <option value="Rusia">England</option>
+          <option value="Rusia">Australia</option>
+          <option value="Rusia">Germany</option>
+        </select>
+        <div class="invalid-feedback">Invalid option, select a valid one.</div>
+      </div>
+    </div>
+    <div class="form-group row">
+      <label for="formGroupExampleInput" class="col-sm-2 col-form-label" for="Phone"> Phone: </label>
+      <div class="col-sm-10">
+        <input type="text" class="form-control" name="Phone" placeholder="" required>
+      </div>
     </div>
     <div class="form-group">
-      <label for="formGroupExampleInput2">Last Name: </label>
-      <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Another input">
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+        <label class="form-check-label" for="invalidCheck">
+          Chechk here to certify that you are 18 years of age or older and agree to the <text class="text-warning">Terms</text> of this purchase
+        </label>
+        <div class="invalid-feedback">
+          You must agree before submitting.
+        </div>
+      </div>
     </div>
-    <div class="form-group">
-      <label for="formGroupExampleInput2">Email: </label>
-      <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="name@example.com">
-    </div>
+    <button class="btn btn-primary" type="submit">Submit</button>
   </form>
+
+
+  <script>
+    // Example starter JavaScript for disabling form submissions if there are invalid fields
+    (function() {
+      'use strict';
+      window.addEventListener('load', function() {
+        // Fetch all the forms we want to apply custom Bootstrap validation styles to
+        var forms = document.getElementsByClassName('needs-validation');
+        // Loop over them and prevent submission
+        var validation = Array.prototype.filter.call(forms, function(form) {
+          form.addEventListener('submit', function(event) {
+            if (form.checkValidity() === false) {
+              event.preventDefault();
+              event.stopPropagation();
+            }
+            form.classList.add('was-validated');
+          }, false);
+        });
+      }, false);
+    })();
+  </script>
 
 </body>
 
